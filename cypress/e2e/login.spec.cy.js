@@ -14,7 +14,7 @@ describe('template spec', () => {
   
 
   it('pass', () => {
-    cy.visit('opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.userSucess.username)
     cy.get(selectorsList.passwordField).type(userData.userSucess.password)
     cy.get("button.oxd-button").click() 
@@ -25,7 +25,7 @@ describe('template spec', () => {
   })
 
   it('login-fail', () => {
-    cy.visit('opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.userFail.username)
     cy.get(selectorsList.passwordField).type(userData.userFail.password)
     cy.get(selectorsList.logginButton).click()
